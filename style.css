@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  height: 100vh;
+}
+
+header {
+  background: #A5FFA5;
+  padding: 15px 0;
+}
+
+header>div {
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+}
+
+header h1 {
+  display: inline-block;
+  width: 100%;
+  
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 5px;
+  color: #151515;
+  /* padding: 7px; */
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  background: white;
+  padding: 15px 0;
+
+  overflow: scroll;
+}
+
+main>div[class=wrapper] {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 7px;
+
+  align-items: center;
+
+  overflow: scroll;
+}
+
+main>div[class=wrapper]>label {
+  width: 100%;
+  margin-right: 10px;
+}
+
+main>div[class=wrapper]>input {
+  padding: 7px;
+
+  border-radius: 1px;
+  border-style: solid;
+  border-width: .1px;
+
+  background: #FAFAFA;
+
+  font-size: 1em;
+}
+
+main>div[class=wrapper]>p {
+  margin: 0;
+  padding: 0;
+
+  margin-left: 10px;
+}
+
+footer {
+  background: #A5FFA5;
+  padding: 15px 0;
+}
