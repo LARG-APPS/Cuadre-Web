@@ -47,6 +47,7 @@ header nav a {
 
 .wrapper {
   width: 90%;
+  max-width: 1289px;
   margin: 0 auto;
 }
 
