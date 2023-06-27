@@ -95,3 +95,7 @@ footer {
   background: #A5FFA5;
   padding: 15px 0;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
