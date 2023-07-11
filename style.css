@@ -88,7 +88,7 @@ main>div[class=wrapper]>input {
   border-style: solid;
   border-width: .1px;
 
-  background: var(--secondary-color));
+  background: var(--secondary-color);
 
   font-size: 1em;
 }
