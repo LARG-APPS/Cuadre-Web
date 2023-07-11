@@ -1,3 +1,5 @@
+var nombre = 'Cuadre Web'
+
 var unoLabel = document.getElementById('label-uno')
 var dosLabel = document.getElementById('label-dos')
 var tresLabel = document.getElementById('label-tres')
@@ -91,7 +93,7 @@ function refresh(){
   if (total > 0) {
     document.getElementsByTagName('h1')[0].innerText = 'Total: ' + total
   } else {
-    document.getElementsByTagName('h1')[0].innerText = 'Cuadre'
+    document.getElementsByTagName('h1')[0].innerText = nombre
   }
 
 }
