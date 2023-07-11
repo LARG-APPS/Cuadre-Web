@@ -1,9 +1,7 @@
 :root {
    --primary-color: #3EDF63;
-   --bg-color: #E4FFE8;
-
+   --secondary-color: #E4FFE8;
    --text-color: #002502;
-   --input-color: #FAFAFA;
 }
 
 * {
@@ -20,7 +18,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 
-  height: 100vh;
 }
 
 header {
@@ -62,7 +59,7 @@ header nav a {
 }
 
 main {
-  background: var(--bg-color);
+  background: #FAFAFA;
   padding: 15px 0;
 
   overflow: scroll;
@@ -86,13 +83,12 @@ main>div[class=wrapper]>label {
 main>div[class=wrapper]>input {
   padding: 7px;
 
-  border-radius: 5px;
+  border-radius: 7px;
   border-color: var(--text-color);
   border-style: solid;
   border-width: .1px;
-  border: none;
 
-  background: var(--input-color);
+  background: var(--secondary-color));
 
   font-size: 1em;
 }
