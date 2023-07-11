@@ -1,4 +1,4 @@
-var nombre = 'Cuadre Web'
+var nombre = 'Cuadre'
 
 var unoLabel = document.getElementById('label-uno')
 var dosLabel = document.getElementById('label-dos')
