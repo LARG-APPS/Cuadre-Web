@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    :root {
+   --primary-color: #3EDF63;
+   --secondary-color: #E4FFE8;
+   --text-color: #002502;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  height: 100vh;
+}
+
+header {
+  background: var(--primary-color);
+  padding: 15px 0;
+}
+
+header>div {
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+}
+
+header h1 {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+
+  color: var(--text-color);
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 5px;
+  color: var(--text-color);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+main {
+  background: #FAFAFA;
+  padding: 15px 0;
+
+  overflow: scroll;
+}
+
+main>div[class=wrapper] {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 7px;
+
+  align-items: center;
+
+  overflow: scroll;
+}
+
+main>div[class=wrapper]>label {
+  width: 100%;
+  margin-right: 10px;
+}
+
+main>div[class=wrapper]>input {
+  padding: 7px;
+
+  border-radius: 7px;
+  border-color: var(--text-color);
+  border-style: solid;
+  border-width: .1px;
+
+  background: var(--secondary-color);
+
+  font-size: 1em;
+}
+
+main>div[class=wrapper]>p {
+  margin: 0;
+  padding: 0;
+
+  margin-left: 10px;
+}
+
+footer {
+  background: var(--primary-color);
+  padding: 15px 0;
+
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+  </style>
+  
+  <title>Cuadre HTML</title>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>Cuadre</h1>
+
+      <nav>
+        <a id="clear" href="#">Limpiar</a>
+        <a id="save" href="#">Guardar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <label id="label-uno" for="uno">1000</label> <input type="number" name="" id="uno">
+      <p id="uno-result">0</p>
+      <label id="label-dos" for="dos">500</label> <input type="number" name="" id="dos">
+      <p id="dos-result">0</p>
+      <label id="label-tres" for="tres">200</label> <input type="number" name="" id="tres">
+      <p id="tres-result">0</p>
+      <label id="label-cuatro" for="cuatro">100</label> <input type="number" name="" id="cuatro">
+      <p id="cuatro-result">0</p>
+      <label id="label-cinco" for="cinco">50</label> <input type="number" name="" id="cinco">
+      <p id="cinco-result">0</p>
+      <label id="label-seis" for="seis">20</label> <input type="number" name="" id="seis">
+      <p id="seis-result">0</p>
+      <label id="label-siete" for="siete">10</label> <input type="number" name="" id="siete">
+      <p id="siete-result">0</p>
+      <label id="label-ocho" for="ocho">5</label> <input type="number" name="" id="ocho">
+      <p id="ocho-result">0</p>
+      <label id="label-nueve" for="nueve">3</label> <input type="number" name="" id="nueve">
+      <p id="nueve-result">0</p>
+      <label id="label-diez" for="diez">1</label> <input type="number" name="" id="diez">
+      <p id="diez-result">0</p>
+    </div>
+  </main>
+
+  <footer>
+    <p class="wrapper">
+      Developed by <b>LARG APPS</b>
+    </p>
+  </footer>
+
+  <script>
+    var nombre = 'Cuadre'
+
+var unoLabel = document.getElementById('label-uno')
+var dosLabel = document.getElementById('label-dos')
+var tresLabel = document.getElementById('label-tres')
+var cuatroLabel = document.getElementById('label-cuatro')
+var cincoLabel = document.getElementById('label-cinco')
+var seisLabel = document.getElementById('label-seis')
+var sieteLabel = document.getElementById('label-siete')
+var ochoLabel = document.getElementById('label-ocho')
+var nueveLabel = document.getElementById('label-nueve')
+var diezLabel = document.getElementById('label-diez')
+
+var uno = document.getElementById('uno')
+var dos = document.getElementById('dos')
+var tres = document.getElementById('tres')
+var cuatro = document.getElementById('cuatro')
+var cinco = document.getElementById('cinco')
+var seis = document.getElementById('seis')
+var siete = document.getElementById('siete')
+var ocho = document.getElementById('ocho')
+var nueve = document.getElementById('nueve')
+var diez = document.getElementById('diez')
+
+var unoResult = document.getElementById('uno-result')
+var dosResult = document.getElementById('dos-result')
+var tresResult = document.getElementById('tres-result')
+var cuatroResult = document.getElementById('cuatro-result')
+var cincoResult = document.getElementById('cinco-result')
+var seisResult = document.getElementById('seis-result')
+var sieteResult = document.getElementById('siete-result')
+var ochoResult = document.getElementById('ocho-result')
+var nueveResult = document.getElementById('nueve-result')
+var diezResult = document.getElementById('diez-result')
+
+uno.value = localStorage.getItem('uno')
+dos.value = localStorage.getItem('dos')
+tres.value = localStorage.getItem('tres')
+cuatro.value = localStorage.getItem('cuatro')
+cinco.value = localStorage.getItem('cinco')
+seis.value = localStorage.getItem('seis')
+siete.value = localStorage.getItem('siete')
+ocho.value = localStorage.getItem('ocho')
+nueve.value = localStorage.getItem('nueve')
+diez.value = localStorage.getItem('diez')
+refresh()
+
+uno.oninput = function(){
+  refresh()
+}
+dos.oninput = function() {
+  refresh()
+}
+tres.oninput = function() {
+  refresh()
+}
+cuatro.oninput = function() {
+  refresh()
+}
+cinco.oninput = function() {
+  refresh()
+}
+seis.oninput = function() {
+  refresh()
+}
+siete.oninput = function() {
+  refresh()
+}
+ocho.oninput = function() {
+  refresh()
+}
+nueve.oninput = function() {
+  refresh()
+}
+diez.oninput = function() {
+  refresh()
+}
+
+function refresh(){
+  unoResult.innerText = (uno.value * unoLabel.innerText); 
+  dosResult.innerText = (dos.value * dosLabel.innerText); 
+  tresResult.innerText = (tres.value * tresLabel.innerText); 
+  cuatroResult.innerText = (cuatro.value * cuatroLabel.innerText); 
+  cincoResult.innerText = (cinco.value * cincoLabel.innerText); 
+  seisResult.innerText = (seis.value * seisLabel.innerText); 
+  sieteResult.innerText = (siete.value * sieteLabel.innerText); 
+  ochoResult.innerText = (ocho.value * ochoLabel.innerText); 
+  nueveResult.innerText = (nueve.value * nueveLabel.innerText); 
+  diezResult.innerText = (diez.value * diezLabel.innerText); 
+
+  var total = ((+(unoResult.innerText)) + (+(dosResult.innerText)) + (+(tresResult.innerText)) + (+(cuatroResult.innerText)) + (+(cincoResult.innerText)) + (+(seisResult.innerText)) + (+(sieteResult.innerText)) + (+(ochoResult.innerText)) + (+(nueveResult.innerText)) + (+(diezResult.innerText)))
+  
+  if (total > 0) {
+    document.getElementsByTagName('h1')[0].innerText = 'Total: ' + total
+  } else {
+    document.getElementsByTagName('h1')[0].innerText = nombre
+  }
+
+}
+
+document.getElementById('save').onclick = function(){
+  localStorage.setItem('uno', uno.value)
+  localStorage.setItem('dos', dos.value)
+  localStorage.setItem('tres', tres.value)
+  localStorage.setItem('cuatro', cuatro.value)
+  localStorage.setItem('cinco', cinco.value)
+  localStorage.setItem('seis', seis.value)
+  localStorage.setItem('siete', siete.value)
+  localStorage.setItem('ocho', ocho.value)
+  localStorage.setItem('nueve', nueve.value)
+  localStorage.setItem('diez', diez.value)
+}
+
+document.getElementById('clear').onclick = function clear(){
+  uno.value = '';
+  dos.value = '';
+  tres.value = '';
+  cuatro.value = '';
+  cinco.value = '';
+  seis.value = '';
+  siete.value = '';
+  ocho.value = '';
+  nueve.value = '';
+  diez.value = '';
+  
+  refresh()
+}
+  </script>
+</body>
+</html>
